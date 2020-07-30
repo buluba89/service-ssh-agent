@@ -16,6 +16,7 @@ if [[ "$1" == "ssh-agent" ]]; then
 
 	# Start ssh-agent
 	echo "Launching ssh-agent..."
+	/usr/local/bin/ssh-add-all-keys.sh &
 	exec /usr/bin/ssh-agent -a ${SSH_AUTH_SOCK} -d
 
 # Proxy mode
